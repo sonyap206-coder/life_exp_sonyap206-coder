@@ -36,3 +36,5 @@ df |>
 
 ```
 
+# 2.6.5.1 Exercises
+- We are looking at the years with the max `lifeExp`
