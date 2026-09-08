@@ -17,3 +17,22 @@ Here, I re-examine the analysis of Oeppen and Vaupel (2002).
 
 - Save `life_exp_aalysis.qmd`
 
+
+```{r}
+#loading data
+df <- gapminder::gapminder_unfiltered
+head(df)
+```
+
+
+```{r}
+df |>
+  group_by(country) |>
+  filter(lifeExp == max(lifeExp)) |>
+  ungroup() |>
+  select(year, country, lifeExp) |>
+  arrange(year) -> 
+  sumdat
+
+```
+
